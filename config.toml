@@ -1,0 +1,44 @@
+baseURL = "https://stafeeva.co.uk"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+
+[params]
+  description = "Homepage and blog by Natalia Stafeeva"
+  keywords = "homepage, software, development, programming, web, frontend"
+  title = "Natalia Stafeeva"
+  subtitle = "Software Engineer"
+  homeSubtitle = "Software Engineer"
+
+  contentTypeName = "posts"
+  defaultTheme = "dark"
+
+[languages]
+  [languages.en]
+    title = "Natalia Stafeeva"
+    subtitle = "Software Engineer"
+    keywords = ""
+    copyright = ""
+    readOtherPosts = "Read other posts"
+
+# Social icons
+[[params.social]]
+  name = "instagram"
+  url= "https://www.instagram.com/natasha_stafeeva/"
+
+[[params.social]]
+  name = "github"
+  url  = "https://github.com/Stafeeva"
+
+[[params.social]]
+  name = "linkedin"
+  url  = "https://www.linkedin.com/in/natalia-stafeeva/"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
