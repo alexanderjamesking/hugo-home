@@ -9,6 +9,6 @@ docker run -d \
        -l traefik.docker.network=web \
        -l traefik.enable=true \
        -l traefik.port=80 \
-       -l traefik.frontend.rule=Host:stafeeva.ajk.cloud \
+       -l traefik.frontend.rule=Host:stafeeva.ajk.cloud,stafeeva.co.uk,www.stafeeva.co.uk \
        $IMAGE
 docker ps --filter "name=stafeeva"
