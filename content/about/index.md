@@ -1,6 +1,5 @@
 ---
 title: "Natalia Stafeeva"
-draft: true
 ---
 
 Software Engineer, Front End developer, passionate about building applications giving users the best experience.  
