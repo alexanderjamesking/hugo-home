@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-theme = "hello-friend-ng"
+theme = "natalia"
 
 [params]
   description = "Homepage and blog by Natalia Stafeeva"
