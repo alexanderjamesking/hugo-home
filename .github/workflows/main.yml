@@ -1,0 +1,22 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    name: Build container
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the Docker Image
+      run: docker build . --tag alexanderjamesking/stafeeva:$GITHUB_SHA
+    - name: Login to Docker Hub
+      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASS }}
+    - name: Push container
+      run: docker push alexanderjamesking/stafeeva:$GITHUB_SHA
+    - name: Prepare key
+      run: ./decrypt_secret.sh
+      env:
+        MY_SECRET: ${{ secrets.MY_SECRET }}
+    - name: Deploy
+      run: ssh -i id_rsa -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null core@89.145.161.130 "IMAGE=alexanderjamesking/stafeeva:$GITHUB_SHA bash -s" < deploy.sh

@@ -1,4 +1,4 @@
-baseURL = "https://stafeeva.co.uk"
+baseURL = "/"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
