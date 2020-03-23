@@ -10,6 +10,8 @@ tags:
 A game build with p5 library.
 https://p5js.org/
 
+Keys: Space < >
+
 <script src="p5.min.js"></script>
 <script src="p5.sound.min.js"></script>
 <script src="sketch.js"></script>
