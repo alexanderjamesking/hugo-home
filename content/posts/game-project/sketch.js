@@ -24,7 +24,7 @@ var tokens;
 var platforms;
 
 var game_score;
-var flagpoles;
+var flagpole;
 var lives;
 var gameOver;
 
@@ -51,7 +51,7 @@ function preload() {
 }
 
 function setup() {
-  sreenCanvas = { width: 1024, height: 576 };
+  sreenCanvas = { width: 750, height: 576 };
   var canvas = createCanvas(sreenCanvas.width, sreenCanvas.height);
   canvas.parent("container");
 
@@ -110,7 +110,7 @@ function startGame() {
 
   canyons = [
     { x_pos: -800, width: 600, waterLevel: 20 },
-    { x_pos: (width / 5) * 4, width: 80, waterLevel: 20 },
+    { x_pos: 830, width: 80, waterLevel: 20 },
     { x_pos: 90, width: 80, waterLevel: 20 },
     { x_pos: 1100, width: 80, waterLevel: 20 },
     { x_pos: 1620, width: 70, waterLevel: 20 },
@@ -614,10 +614,10 @@ function drawGameOver() {
   if (gameOver) {
     fill(255, 239, 213);
     stroke(205, 92, 92);
-    rect(width / 3 - 17, height / 2 - 33, 520, 50);
+    rect(30, 50, 520, 50);
     fill(205, 92, 92);
     noStroke();
-    text("Gave Over. Please press space to restart.", width / 3, height / 2);
+    text("Gave Over. Please press space to restart.", 40, 80);
   }
 }
 
@@ -626,15 +626,11 @@ function drawLevelComplete() {
   if (flagpole.isReached) {
     fill(255, 239, 213);
     stroke(205, 92, 92);
-    rect(width / 4, height / 2 - 33, 600, 80);
+    rect(30, 50, 600, 80);
     fill(205, 92, 92);
     noStroke();
-    text(
-      "Level is complete! Please press space to restart.",
-      width / 4 + 7,
-      height / 2
-    );
-    text(`Your score: ${game_score}`, width / 4 + 7, height / 2 + 30);
+    text("Level is complete! Please press space to restart.", 40, 80);
+    text(`Your score: ${game_score}`, 40, 120);
   }
 }
 
