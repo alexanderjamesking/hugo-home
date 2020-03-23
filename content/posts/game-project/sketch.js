@@ -53,6 +53,9 @@ function preload() {
 function setup() {
   sreenCanvas = { width: 750, height: 576 };
   var canvas = createCanvas(sreenCanvas.width, sreenCanvas.height);
+  window.onkeydown = function(e) {
+    return !(e.keyCode == 32);
+  };
   canvas.parent("container");
 
   floorPos_y = (height * 3) / 4;
